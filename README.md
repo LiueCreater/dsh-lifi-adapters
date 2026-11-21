@@ -1,6 +1,6 @@
 # Lifi 玻璃适配（dsh-lifi-adapters）
 
-把第三方 DSH 插件的页面与卡片接入 Liue 的玻璃体系，并**由本包提供**对外的玻璃表面契约（`.lifi-glass` 类、`--lifi-*` 变量、`window.dshLifiGlass`）。Liue 主包不再包含这部分内容。
+把第三方 DSH 插件的页面与卡片接入 Lifiwallpaper 的玻璃体系，并**由本包提供**对外的玻璃表面契约（`.lifi-glass` 类、`--lifi-*` 变量、`window.dshLifiGlass`）。Lifiwallpaper 主包不再包含这部分内容。
 
 - 纯客户端 CSS + 少量 JS，无 Host 端口、无网络请求、无数据读写。
 - 独立安装/卸载，不内置在 Lifiwallpaper 包体中。
@@ -8,9 +8,9 @@
 
 ## 版本矩阵
 
-| dsh-lifi-adapters | 兼容的 dsh-lifiwallpaper | 说明                                         |
-| ----------------- | --------------------- | ------------------------------------------ |
-| 0.1.0             | 0.2.7                 | 首个公开契约版本；Liue 只提供 `data-dsh-ap-version` 标记 |
+| dsh-lifi-adapters | 兼容的 dsh-lifiwallpaper | 说明                                                  |
+| ----------------- | --------------------- | --------------------------------------------------- |
+| 0.1.0             | 0.2.7                 | 首个公开契约版本；Lifiwallpaper 只提供 `data-dsh-ap-version` 标记 |
 
 Lifiwallpaper 升级到新协议时，需要同步发布新的 adapter 版本并在 `client.js` 里修改 `REQUIRED_LIFI`。
 
@@ -26,7 +26,7 @@ Lifiwallpaper 升级到新协议时，需要同步发布新的 adapter 版本并
 <div class="lifi-glass">…</div>
 ```
 
-即可获得与 Lifiwallpaper 一致的玻璃：背景色、模糊、边框、圆角都会跟随用户的 Liue 设置。
+即可获得与 Lifiwallpaper 一致的玻璃：背景色、模糊、边框、圆角都会跟随用户的 Lifiwallpaper 设置。
 
 可用变量（由本包定义在 `<html>` 上）：
 
@@ -60,7 +60,7 @@ if (window.dshLifiGlass?.protocol === 'lifi-appearance/0.2.7') {
 
 - `billion-context` 的「上下文」是**跨源 iframe**（`/__bili/?embed=1&theme=…`）。浏览器同源策略禁止父页面修改其内部样式，只能处理外框；要统一内部背景需要 bili 侧支持透明背景或主题参数。
 - 若第三方页面将来改用 Shadow DOM，需要单独适配。
-- 本包只在 Liue 0.2.7 上验证；其他版本会主动禁用。
+- 本包只在 Lifiwallpaper 0.2.7 上验证；其他版本会主动禁用。
 
 ## 许可
 
