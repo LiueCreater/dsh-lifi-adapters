@@ -2,20 +2,21 @@
   "name": "dsh-lifi-adapters",
   "version": "0.1.0",
   "type": "module",
-  "description": "Glass-surface contract and third-party page adapters for Liue (dsh-lifiwallpaper). Adapter 0.1.0 requires Liue 0.2.7.",
+  "description": "Glass-surface contract and third-party page adapters for lifi (dsh-lifiwallpaper). Adapter 0.1.0 requires lifi 0.2.7.",
   "license": "MIT",
   "main": "index.js",
   "exports": {
     ".": "./index.js",
     "./client": "./client.js",
     "./package.json": "./package.json",
-    "./icon": "./icon.svg",
+    "./icon": "./icon.png",
     "./locale/*.json": "./locale/*.json"
   },
   "files": [
     "index.js",
     "client.js",
     "cordis.patch.yml",
+    "icon.png",
     "icon.svg",
     "README.md",
     "LICENSE",
